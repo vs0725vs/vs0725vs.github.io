@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <title>部落原鄉之旅</title>
+    <!-- 開場動畫 -->
+    <link rel="stylesheet" href="./css/op.css">
+    <link rel="stylesheet" href="./css/banner.css">
+  </head>
+  <body style="overflow:hidden">
+    <!-- 開場動畫 -->
+    <section class="background-color">
+      <div class="background">
+          <img src="./img/img-op/could-01.png" alt="could" id="could-op">
+          <img src="./img/img-op//m-01.png" alt="mountain" id="mountain-op">
+          <img src="./img/img-op//sun-01.png" alt="sun" id="sun-op">
+          <img src="./img/img-op//grass-04-01.png" alt="grass" id="grass-op">
+          <img src="./img/img-op//title-01.png" alt="title1" id="title1-op">
+          <img src="./img/img-op//title2-01.png" alt="title2" id="title2-op">
+      </div>
+    </section>
+    
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <!-- 開場動畫JS -->
+    <script src="./js/anime.min.js"></script>
+    <script src="./js/op.js"></script>
+    <script src="./js/app.js"></script>
+
+    <script>
+      //parallax效果
+      var scene = document.getElementById("hunter");
+      var bear = document.getElementById("bear");
+      var deer = document.getElementById("deer");
+      var sun = document.getElementById("sun");
+      var parallaxInstance = new Parallax(scene, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(bear, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(deer, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(sun, {
+        relativeInput: false,
+      });
+      parallaxInstance.friction(0.1, 0.2);
+    </script>
+
+
+  </body>
+</html>
