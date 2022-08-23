@@ -73,8 +73,12 @@
         }
         button {
           border: 1px solid black;
+          transition: all 0.2s ease-in;
+          &:hover {
+            background-color: rgba(250, 235, 215, 0.445);
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527)
+          }
           &:hover a {
-           
           }
         }
       }
