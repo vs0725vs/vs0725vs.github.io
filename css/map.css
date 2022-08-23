@@ -337,7 +337,7 @@ body {
   position: relative;
   overflow: hidden;
   background: rgb(233, 236, 219);
-  background: linear-gradient(180deg, #fff 2%, rgb(236, 235, 226) 26%, rgb(221, 223, 210) 60%, #DBBAA1 80%);
+  background: linear-gradient(180deg, #fff 2%, rgb(236, 235, 226) 26%, rgb(221, 223, 210) 95%, #DBBAA1 100%);
 }
 @media (max-width: 1400px) {
   .wrap {
