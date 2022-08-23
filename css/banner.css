@@ -106,13 +106,8 @@
   width: 100%;
   position: absolute;
   z-index: 9;
-  top: 1%;
-  right: 1%;
-}
-* body section.banner .banner-active #title2 {
-  width: 100%;
-  position: absolute;
-  z-index: 9;
+  top: 6%;
+  left: 45%;
 }
 * body section.banner .banner-active #mountain {
   width: 100%;
@@ -132,7 +127,7 @@
 * body section.banner .banner-active #deer {
   position: absolute;
   z-index: 2;
-  right: 60%;
+  right: 58%;
   top: 64%;
 }
 * body section.banner .banner-active #tree1 {
@@ -151,6 +146,14 @@
   bottom: 5%;
   right: 10%;
 }
+@media (max-width: 1200px) {
+  * body section.banner .banner-active #bear {
+    position: absolute;
+    z-index: 8;
+    bottom: 5%;
+    right: 0%;
+  }
+}
 * body section.banner .banner-active #hunter {
   position: absolute;
   z-index: 5;
@@ -166,7 +169,15 @@
   position: absolute;
   z-index: 8;
   top: 5%;
-  right: 25%;
+  right: 24%;
+}
+@media (max-width: 1200px) {
+  * body section.banner .banner-active #sun {
+    position: absolute;
+    z-index: 8;
+    top: 5%;
+    right: 10%;
+  }
 }
 * body section.banner .banner-active #tatoo {
   position: absolute;

@@ -10,12 +10,13 @@
       width: 100px;
       height: 100px;
       // background-color: aqua !important;
-      background-color:cornflowerblue !important;
+      background-color: cornflowerblue !important;
       border-radius: 50%;
       // box-shadow: 0 0 5px rgba(67, 232, 216, 1), 0 0 10px rgba(67, 232, 216, 1),
       //   0 0 20px rgba(67, 232, 216, 1), 0 0 40px rgba(67, 232, 216, 1);
-      box-shadow: 0 0 5px rgba(100, 149, 216, 1), 0 0 10px rgba(100, 149, 216, 1),
-        0 0 20px rgba(100, 149, 216, 1), 0 0 40px rgba(100, 149, 216, 1);
+      box-shadow: 0 0 5px rgba(100, 149, 216, 1),
+        0 0 10px rgba(100, 149, 216, 1), 0 0 20px rgba(100, 149, 216, 1),
+        0 0 40px rgba(100, 149, 216, 1);
       animation: neo-shine 3s 1s linear infinite;
       @keyframes neo-shine {
         0% {
@@ -75,12 +76,12 @@
       background-position: center center;
       background-size: cover;
       @media (max-width: 820px) {
-        background-image: url('../img/img-banner/banner820px-01.png');
+        background-image: url("../img/img-banner/banner820px-01.png");
       }
       @media (max-width: 375px) {
-        background-image: url('../img/img-banner/banner375px-01.png');
+        background-image: url("../img/img-banner/banner375px-01.png");
       }
-      .banner-active{
+      .banner-active {
         display: none;
         @media (min-width: 820px) {
           display: block;
@@ -89,14 +90,10 @@
           width: 100%;
           position: absolute;
           z-index: 9;
-          top: 1%;
-          right: 1%;
+          top: 6%;
+          left: 45%;
         }
-        #title2 {
-          width: 100%;
-          position: absolute;
-          z-index: 9;
-        }
+
         #mountain {
           width: 100%;
           position: absolute;
@@ -115,7 +112,7 @@
         #deer {
           position: absolute;
           z-index: 2;
-          right: 60%;
+          right: 58%;
           top: 64%;
         }
         #tree1 {
@@ -133,6 +130,12 @@
           z-index: 5;
           bottom: 5%;
           right: 10%;
+          @media (max-width: 1200px) {
+            position: absolute;
+            z-index: 8;
+            bottom: 5%;
+            right: 0%;
+          }
         }
         #hunter {
           position: absolute;
@@ -149,7 +152,13 @@
           position: absolute;
           z-index: 8;
           top: 5%;
-          right: 25%;
+          right: 24%;
+          @media (max-width: 1200px) {
+            position: absolute;
+            z-index: 8;
+            top: 5%;
+            right: 10%;
+          }
         }
         #tatoo {
           position: absolute;
