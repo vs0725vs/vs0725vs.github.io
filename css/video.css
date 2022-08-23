@@ -33,7 +33,7 @@
 .video-title-box {
   position: relative;
   width: 100%;
-  height: 1200px;
+  padding-bottom: 200px;
   background: linear-gradient(#7ab8f6 0%, #5b9bfa 50%);
   overflow: hidden;
 }

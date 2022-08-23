@@ -49,4 +49,5 @@ var animation = anime.timeline({});
         setTimeout(() => {
           document.querySelector('body').style.overflow="visible";
           document.querySelector('.background-color-op').classList.add('hidden');
+          
         }, "7000")
