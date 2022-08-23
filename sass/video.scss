@@ -45,6 +45,20 @@
     .video-padding{
         padding: 0% 18%; 
         // margin:0px 0px;
+        iframe{
+            @media (max-width: 1440px){
+                height: 500px;
+            }
+            @media (max-width: 1280px){
+                height: 400px;
+            }
+            @media (max-width: 820px){
+                height: 300px;
+            }
+            @media (max-width: 500px){
+                height: 150px;
+            }
+        }
     }
     .video-title {
         width: 100%;
@@ -72,6 +86,7 @@
 
         .video-titlebox {
             margin-top: 30px;
+            margin-bottom: 50px;
             border: 2px solid black;
             width: 180px;
             height: 65px;
@@ -135,8 +150,8 @@
     }
 
     .boat {
-        width: 20%;
-        height: 12%;
+        width: 300px;
+        height: 150px;
         position: absolute;
         bottom: 45px;
         left: 100px;
