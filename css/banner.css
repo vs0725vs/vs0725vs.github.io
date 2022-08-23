@@ -87,6 +87,14 @@
   margin: 0px auto;
   height: 1px;
 }
+* body .modal-dialog .modal-body button {
+  border: 1px solid black;
+  transition: all 0.2s ease-in;
+}
+* body .modal-dialog .modal-body button:hover {
+  background-color: rgba(250, 235, 215, 0.445);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527);
+}
 * body section.banner {
   position: relative;
   width: 100%;
