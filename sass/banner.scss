@@ -18,6 +18,9 @@
         0 0 10px rgba(100, 149, 216, 1), 0 0 20px rgba(100, 149, 216, 1),
         0 0 40px rgba(100, 149, 216, 1);
       animation: neo-shine 3s 1s linear infinite;
+      .menu.hidden{
+        display: none;
+      }
       @keyframes neo-shine {
         0% {
           opacity: 1;

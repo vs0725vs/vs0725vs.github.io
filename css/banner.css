@@ -19,6 +19,9 @@
   transition: all 0.2s ease;
   transform: scale(0.5);
 }
+* body .menu .menu.hidden {
+  display: none;
+}
 @-webkit-keyframes neo-shine {
   0% {
     opacity: 1;

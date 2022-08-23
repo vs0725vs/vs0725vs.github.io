@@ -48,7 +48,7 @@
   <!-- 首頁 -->
 
   <!-- 選單按鈕 -->
-  <button type="button" class="btn btn-light fixed-top m-3 menu fs-5 text-white fw-bold" data-bs-toggle="modal"
+  <button type="button" class="btn btn-light fixed-top m-3 menu fs-5 text-white fw-bold hidden" data-bs-toggle="modal"
     data-bs-target="#exampleModal">
     MENU
   </button>
@@ -72,16 +72,16 @@
                   <a class="nav-link text-black fs-4  active" aria-current="page" href="#">返回首頁</a>
                 </button>
                 <button type="button" class="btn mb-5 d-block" data-bs-dismiss="modal">
-                  <a class="nav-link text-black fs-4 " href="#">部落故事</a>
+                  <a class="nav-link text-black fs-4 " href="#story">部落故事</a>
                 </button>
                 <button type="button" class="btn mb-5 d-block" data-bs-dismiss="modal">
-                  <a class="nav-link text-black fs-4 " href="#">體驗部落</a>
+                  <a class="nav-link text-black fs-4 " href="#experience">體驗部落</a>
                 </button>
                 <button type="button" class="btn mb-5 d-block" data-bs-dismiss="modal">
-                  <a class="nav-link text-black fs-4 " href="#">雲遊四海</a>
+                  <a class="nav-link text-black fs-4 " href="#video">雲遊四海</a>
                 </button>
                 <button type="button" class="btn mb-5 d-block" data-bs-dismiss="modal">
-                  <a class="nav-link text-black fs-4 " href="#">部落地圖</a>
+                  <a class="nav-link text-black fs-4 " href="#map">部落地圖</a>
                 </button>
               </div>
 
@@ -145,7 +145,7 @@
     </div>
   </section>
   <!-- story -->
-  <section class="story">
+  <section class="story" id="story">
     <div class="row tatoo-empty d-flex justify-content-center centered">
       <h3 class="neon-effect mt-2">SCROLL DOWN</h3>
       <i class="bi bi-caret-down neon-effect"></i>
@@ -178,7 +178,7 @@
     </div>
     <div class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"></div>
     <!-- 狩獵區塊 -->
-    <div class="container-fluid intro2 mx-0">
+    <div class="container-fluid intro2 mx-0" id="experience">
       <div class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"></div>
       <div class="row for-intro2 justify-content-center">
         <!-- 圖片 -->
@@ -350,7 +350,7 @@
     <!-- 章節結尾 -->
   </section>
   <!-- 影片專區 -->
-  <section class="video-text position-relative">
+  <section class="video-text position-relative" id="video">
     <img class="position-absolute top-0 panter" style="width: 100%" src="./img/img-footer/pattern.png" alt="" />
     <div class="video-width">
       <p class="p1" data-aos="fade-right" data-aos-duration="1500">
@@ -478,7 +478,7 @@
     <img src="./img/video-img/boat2_1.png" class="boat" alt="" />
   </section>
 
-  <div class="wrap">
+  <div class="wrap" id="map">
     <img class="move-l" src="./img/map/樹枝-左.png" width="200px" height="200px" alt="" />
     <img class="move-r" src="./img/map/樹枝-右.png" width="200px" height="200px" alt="" />
     <img class="owl" src="./img/map/貓頭鷹.png" width="100px" height="100px" alt="" />
