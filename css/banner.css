@@ -86,12 +86,12 @@
 }
 @media (max-width: 820px) {
   * body section.banner {
-    background-image: url("../img/banner820px-01.png");
+    background-image: url("../img/img-banner/banner820px-01.png");
   }
 }
 @media (max-width: 375px) {
   * body section.banner {
-    background-image: url("../img/banner375px-01.png");
+    background-image: url("../img/img-banner/banner375px-01.png");
   }
 }
 * body section.banner .banner-active {
