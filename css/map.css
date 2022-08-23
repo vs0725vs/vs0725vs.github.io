@@ -24,12 +24,12 @@ body {
   background-repeat: no-repeat;
 }
 
-.container {
+.container.hidden-map {
   height: 300px;
   overflow: auto;
 }
 @media (max-width: 375px) {
-  .container {
+  .container.hidden-map {
     overflow: auto;
     height: 300px;
   }

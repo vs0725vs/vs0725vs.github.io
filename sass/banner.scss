@@ -45,15 +45,21 @@
       }
     }
     .modal-dialog {
+      .modal-content{
+        background-image: url("../img/img-banner/menuBackground.png");
+        background-size: cover;
+        background-position: center center;
+      }
+      // background-attachment: fixed;
       .modal-header {
-        background-image: url("../img/img-banner/米色背板.png");
+        // background-image: url("../img/img-banner/米色背板.png");
         background-size: cover;
         background-attachment: fixed;
         height: 92.7px;
         width: 100%;
       }
       .modal-body {
-        background-image: url("../img/img-banner/米色背板.png");
+        // background-image: url("../img/img-banner/menuBackground.png");
         background-size: cover;
         background-attachment: fixed;
         width: 100%;
