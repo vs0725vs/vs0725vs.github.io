@@ -1,96 +1,193 @@
 <!DOCTYPE html>
 <html lang="zh">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- boostrapIcon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <title>部落原鄉之旅</title>
+    <!-- 開場動畫 -->
+    <link rel="stylesheet" href="./css/op.css" />
+    <!-- 首頁 -->
+    <link rel="stylesheet" href="./css/banner.css" />
+    <!-- 影片 -->
+    <link rel="stylesheet" href="./css/video.css" />
+    <!-- 地圖CSS -->
+    <link rel="stylesheet" href="./css/map.css" />
+    <!-- footer` -->
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
 
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet" />
-  <!-- boostrapIcon -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-  <title>部落原鄉之旅</title>
-  <!-- 開場動畫 -->
-  <link rel="stylesheet" href="./css/op.css" />
-  <!-- 首頁 -->
-  <link rel="stylesheet" href="./css/banner.css" />
-  <!-- 影片 -->
-  <link rel="stylesheet" href="./css/video.css" />
-  <!-- 地圖CSS -->
-  <link rel="stylesheet" href="./css/map.css" />
-  <!-- footer` -->
-  <link rel="stylesheet" href="./css/footer.css" />
-</head>
+  <body>
+    <!-- 開場動畫 -->
+    <section class="background-color-op">
+      <div class="background-op">
+        <img
+          class="op-img"
+          src="./img/img-op/could-01.png"
+          alt="could"
+          id="could-op"
+        />
+        <img
+          class="op-img"
+          src="./img/img-op//m-01.png"
+          alt="mountain"
+          id="mountain-op"
+        />
+        <img
+          class="op-img"
+          src="./img/img-op//sun-01.png"
+          alt="sun"
+          id="sun-op"
+        />
+        <img
+          class="op-img"
+          src="./img/img-op//grass-04-01.png"
+          alt="grass"
+          id="grass-op"
+        />
+        <img
+          class="op-img"
+          src="./img/img-op//title-01.png"
+          alt="title1"
+          id="title1-op"
+        />
+        <img
+          class="op-img"
+          src="./img/img-op//title2-01.png"
+          alt="title2"
+          id="title2-op"
+        />
+      </div>
+    </section>
+    <!-- 首頁 -->
 
-<body style="overflow: hidden">
-  <!-- 開場動畫 -->
-  <section class="background-color-op">
-    <div class="background-op">
-      <img class="op-img" src="./img/img-op/could-01.png" alt="could" id="could-op" />
-      <img class="op-img" src="./img/img-op//m-01.png" alt="mountain" id="mountain-op" />
-      <img class="op-img" src="./img/img-op//sun-01.png" alt="sun" id="sun-op" />
-      <img class="op-img" src="./img/img-op//grass-04-01.png" alt="grass" id="grass-op" />
-      <img class="op-img" src="./img/img-op//title-01.png" alt="title1" id="title1-op" />
-      <img class="op-img" src="./img/img-op//title2-01.png" alt="title2" id="title2-op" />
-    </div>
-  </section>
-  <!-- 首頁 -->
+    <!-- 選單按鈕 -->
+    <button
+      type="button"
+      class="btn btn-light fixed-top m-3 menu fs-5 text-white fw-bold hidden"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      MENU
+    </button>
 
-  <!-- 選單按鈕 -->
-  <button type="button" class="btn btn-light fixed-top m-3 menu fs-5 text-white fw-bold hidden" data-bs-toggle="modal"
-    data-bs-target="#exampleModal">
-    MENU
-  </button>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header border-0 text-center">
-          <button type="button" class="btn-close me-5 fs-1" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body border-0">
-          <div class="container">
-            <div class="row">
-              <div class="col-9 col-md-6 col-lg-7 d-flex justify-content-center">
-                <img class="" src="./img/img-banner/title.png" alt="" />
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header border-0 text-center">
+            <button
+              type="button"
+              class="btn-close me-5 fs-1"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-0">
+            <div class="container">
+              <div class="row">
+                <div
+                  class="col-9 col-md-6 col-lg-7 d-flex justify-content-center"
+                >
+                  <img class="" src="./img/img-banner/title.png" alt="" />
+                </div>
+                <div class="col-3 col-md-6 col-lg-5 text-center">
+                  <button
+                    type="button"
+                    class="btn mb-5 d-block"
+                    data-bs-dismiss="modal"
+                  >
+                    <a
+                      class="nav-link text-black fs-4 active"
+                      aria-current="page"
+                      href="#"
+                      >返回首頁</a
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="btn mb-5 d-block"
+                    data-bs-dismiss="modal"
+                  >
+                    <a
+                      class="nav-link text-black fs-4"
+                      onclick="scrollPosition(document.querySelector('#story').offsetTop);"
+                      >部落故事</a
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="btn mb-5 d-block"
+                    data-bs-dismiss="modal"
+                  >
+                    <a
+                      class="nav-link text-black fs-4"
+                      onclick="scrollPosition(document.querySelector('#experience').offsetTop);"
+                      >體驗部落</a
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="btn mb-5 d-block"
+                    data-bs-dismiss="modal"
+                  >
+                    <a
+                      class="nav-link text-black fs-4"
+                      onclick="scrollPosition(document.querySelector('#video').offsetTop);"
+                      >雲遊四海</a
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="btn mb-5 d-block"
+                    data-bs-dismiss="modal"
+                  >
+                    <a
+                      class="nav-link text-black fs-4"
+                      onclick="scrollPosition(document.querySelector('#map').offsetTop);"
+                      >部落地圖</a
+                    >
+                  </button>
+                </div>
               </div>
-              <div class="col-3 col-md-6 col-lg-5 text-center">
-                <button type="button" class="btn mb-5 d-block" data-bs-dismiss="modal">
-                  <a class="nav-link text-black fs-4  active" aria-current="page" href="#">返回首頁</a>
-                </button>
-                <button type="button" class="btn mb-5 d-block" data-bs-dismiss="modal">
-                  <a class="nav-link text-black fs-4 " href="#story">部落故事</a>
-                </button>
-                <button type="button" class="btn mb-5 d-block" data-bs-dismiss="modal">
-                  <a class="nav-link text-black fs-4 " href="#experience">體驗部落</a>
-                </button>
-                <button type="button" class="btn mb-5 d-block" data-bs-dismiss="modal">
-                  <a class="nav-link text-black fs-4 " href="#video">雲遊四海</a>
-                </button>
-                <button type="button" class="btn mb-5 d-block" data-bs-dismiss="modal">
-                  <a class="nav-link text-black fs-4 " href="#map">部落地圖</a>
-                </button>
-              </div>
-
             </div>
           </div>
-        </div>
 
-
-        <!-- <div class="modal-footer">
+          <!-- <div class="modal-footer">
             <button
               type="button"
               class="btn btn-secondary"
@@ -99,333 +196,550 @@
               Close
             </button>
           </div> -->
+        </div>
       </div>
     </div>
-  </div>
-  <section class="banner container-fluid p-0">
-    <div class="banner-active">
-      <div id="mountain">
-        <img data-depth="0.5" src="./img/img-banner/mountain-01.png" alt="" />
-      </div>
-      <div id="grass3">
-        <img data-depth="0.0" class="grass3" src="./img/img-banner/grass-03-01.png" alt="" />
-      </div>
-      <div id="title">
-        <img data-depth="0.1" src="./img/img-banner/title.png" alt="" />
+    <section class="banner container-fluid p-0">
+      <div class="banner-active">
+        <div id="mountain">
+          <img data-depth="0.5" src="./img/img-banner/mountain-01.png" alt="" />
+        </div>
+        <div id="grass3">
+          <img
+            data-depth="0.0"
+            class="grass3"
+            src="./img/img-banner/grass-03-01.png"
+            alt=""
+          />
+        </div>
+        <div id="title">
+          <img data-depth="0.1" src="./img/img-banner/title.png" alt="" />
+        </div>
+
+        <div id="tree2">
+          <img
+            data-depth="0.0"
+            class="tree2"
+            src="./img/img-banner/tree-02-01.png"
+            alt=""
+          />
+        </div>
+
+        <div id="deer">
+          <img data-depth="0.3" src="./img/img-banner/deer.png" alt="" />
+        </div>
+        <div id="tree1">
+          <img
+            data-depth="0.0"
+            class="tree1"
+            src="./img/img-banner/tree-01-01.png"
+            alt=""
+          />
+        </div>
+        <div id="grass2">
+          <img
+            data-depth="0.0"
+            class="grass2"
+            src="./img/img-banner/grass-02-01.png"
+            alt=""
+          />
+        </div>
+        <div id="bear">
+          <img data-depth="0.1" src="./img/img-banner/bear.png" alt="" />
+        </div>
+        <div id="hunter">
+          <img data-depth="0.5" src="./img/img-banner/hunter.png" alt="" />
+        </div>
+        <div id="grass">
+          <img class="grass" src="./img/img-banner/grass-1-01.png" alt="" />
+        </div>
+        <div id="sun">
+          <img data-depth="0.3" src="./img/img-banner/sun.png" alt="" />
+        </div>
+        <div id="tatoo">
+          <img src="./img/img-banner/圖騰_工作區域 1.png" alt="" />
+        </div>
       </div>
 
-      <div id="tree2">
-        <img data-depth="0.0" class="tree2" src="./img/img-banner/tree-02-01.png" alt="" />
+    </section>
+    <!-- story -->
+    <section class="story" id="story">
+      <div class="row tatoo-empty d-flex justify-content-center centered">
+        <h3 class="neon-effect mt-2">SCROLL DOWN</h3>
+        <i class="bi bi-caret-down neon-effect"></i>
       </div>
-
-      <div id="deer">
-        <img data-depth="0.3" src="./img/img-banner/deer.png" alt="" />
-      </div>
-      <div id="tree1">
-        <img data-depth="0.0" class="tree1" src="./img/img-banner/tree-01-01.png" alt="" />
-      </div>
-      <div id="grass2">
-        <img data-depth="0.0" class="grass2" src="./img/img-banner/grass-02-01.png" alt="" />
-      </div>
-      <div id="bear">
-        <img data-depth="0.1" src="./img/img-banner/bear.png" alt="" />
-      </div>
-      <div id="hunter">
-        <img data-depth="0.5" src="./img/img-banner/hunter.png" alt="" />
-      </div>
-      <div id="grass">
-        <img class="grass" src="./img/img-banner/grass-1-01.png" alt="" />
-      </div>
-      <div id="sun">
-        <img data-depth="0.3" src="./img/img-banner/sun.png" alt="" />
-      </div>
-      <div id="tatoo">
-        <img src="./img/img-banner/圖騰_工作區域 1.png" alt="" />
-      </div>
-    </div>
-  </section>
-  <!-- story -->
-  <section class="story" id="story">
-    <div class="row tatoo-empty d-flex justify-content-center centered">
-      <h3 class="neon-effect mt-2">SCROLL DOWN</h3>
-      <i class="bi bi-caret-down neon-effect"></i>
-    </div>
-    <div class="container-fluid top-container">
-      <!-- 開頭介紹 -->
-      <!-- 2 -->
-      <div class="row text-area px-lg-5">
-        <div class="col-12 col-lg-5 mx-lg-5">
-          <div class="card-body mt-5">
-            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000"
-              class="d-flex flex-column">
-              <h3 class="card-title my-3 my-lg-3">原鄉部落</h3>
-              <p class="card-text mb-5">
-                福爾摩沙，這聳立於太平洋濱的巍峨璞石，曖曖透亮的奇異光彩，是這片土地自始擁有的瑰寶，讓我們循著璞石紋理一起探詢這寶石般的原住民部落！
-              </p>
-              <div class="row px-2">
-                <a href="./all.html" class="col-4 btn btnalign-self-center">我要體驗</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000"
-        class="d-flex flex-column mb-5">
-        <div class="row justify-content-end mb-md-5 mb-lg-4">
-          <img class="col-10 title-pic px-0" src="./img/img-banner/拼板舟1.jpg" alt="" />
-        </div>
-      </div>
-    </div>
-    <div class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"></div>
-    <!-- 狩獵區塊 -->
-    <div class="container-fluid intro2 mx-0" id="experience">
-      <div class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"></div>
-      <div class="row for-intro2 justify-content-center">
-        <!-- 圖片 -->
-        <div class="col-12 col-md-12 col-lg-8 p-0">
-          <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
-            <img class="show" src="./img/img-banner/狩獵.jpg 暈影.jpg" alt="" />
-          </div>
-        </div>
-        <!-- 文字區塊 -->
-        <div class="col-10 col-md-12 col-lg-4 align-self-start p-0 mb-3">
-          <!-- 1 -->
-          <div class="row m-0">
-            <div class="col-4">
-              <div class="empty"></div>
-            </div>
-          </div>
-          <!-- 2 -->
-          <div class="row text-area m-0 justify-content-center">
-            <div class="col-12 col-md-8 col-lg-10 col-xl-10 col-xxl-10 my-md-5 my-lg-0">
-              <div class="card-body">
-                <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000"
-                  class="d-flex flex-column">
-                  <h3 class="card-title my-lg-3">山林狩獵</h3>
-                  <p class="card-text mb-sm-4 mb-md-0 mb-lg-0">
-                    狩獵，是帶著禁忌與珍惜萬物的價值，經由一次次涉足山林，形塑一套與自然生活的價值與知識體系，而獵人巡獵之後，也會為部落帶回獵場及周邊環境最新的狀況。他們殺獵物，但他們也對獵物的生命表達敬意。
-                  </p>
-                  <div class="row px-3 justify-content-center justify-content-lg-start">
-                    <a href="./hunt.html" class="col-12 col-md-6 col-lg-6 col-xl-6 btn align-self-center">我要體驗</a>
-                    <img class="word-pic col-12 col-md-6 col-lg-6 col-xl-6 my-3" src="./img/img-banner/狩_字體.png"
-                      alt="" />
-                  </div>
+      <div class="container-fluid top-container">
+        <!-- 開頭介紹 -->
+        <!-- 2 -->
+        <div class="row text-area px-lg-5">
+          <div class="col-12 col-lg-5 mx-lg-5">
+            <div class="card-body mt-5">
+              <div
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="1000"
+                class="d-flex flex-column"
+              >
+                <h3 class="card-title my-3 my-lg-3">原鄉部落</h3>
+                <p class="card-text mb-5">
+                  福爾摩沙，這聳立於太平洋濱的巍峨璞石，曖曖透亮的奇異光彩，是這片土地自始擁有的瑰寶，讓我們循著璞石紋理一起探詢這寶石般的原住民部落！
+                </p>
+                <div class="row px-2">
+                  <a href="./all.html" class="col-4 btn btnalign-self-center"
+                    >我要體驗</a
+                  >
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="row justify-content-center empty2 m-0"></div>
+        </div>
+        <div
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
+          class="d-flex flex-column mb-5"
+        >
+          <div class="row justify-content-end mb-md-5 mb-lg-4">
+            <img
+              class="col-10 title-pic px-0"
+              src="./img/img-banner/拼板舟1.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <!-- 祭典區塊 -->
-    <div class="container-fluid intro2 mx-0">
-      <div class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"></div>
-      <div class="row for-intro2 flex-row-reverse justify-content-center">
-        <!-- 圖片 -->
-        <div class="col-12 col-md-12 col-lg-8 p-0">
-          <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
-            <img class="show2" src="./img/img-banner/祭.jpg 暈影.jpg" alt="" />
-          </div>
-        </div>
-        <!-- 文字區塊 -->
-        <div class="col-10 col-md-12 col-lg-4 align-self-start p-0 mb-3">
-          <!-- 1 -->
-          <div class="row m-0">
-            <div class="col-4">
-              <div class="empty"></div>
+      <div
+        class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"
+      ></div>
+      <!-- 狩獵區塊 -->
+      <div class="container-fluid intro2 mx-0" id="experience">
+        <div
+          class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"
+        ></div>
+        <div class="row for-intro2 justify-content-center">
+          <!-- 圖片 -->
+          <div class="col-12 col-md-12 col-lg-8 p-0">
+            <div
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            >
+              <img
+                class="show"
+                src="./img/img-banner/狩獵.jpg 暈影.jpg"
+                alt=""
+              />
             </div>
           </div>
-          <!-- 2 -->
-          <div class="row text-area m-0 justify-content-center">
-            <div class="col-12 col-md-8 col-lg-10 col-xl-10 col-xxl-10 my-md-5 my-lg-0">
-              <div class="card-body">
-                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000"
-                  class="d-flex flex-column">
-                  <h3 class="card-title my-lg-3">傳統祭典</h3>
-                  <p class="card-text mb-sm-4 mb-md-0 mb-lg-0">
-                    狩獵，是帶著禁忌與珍惜萬物的價值，經由一次次涉足山林，形塑一套與自然生活的價值與知識體系，而獵人巡獵之後，也會為部落帶回獵場及周邊環境最新的狀況。他們殺獵物，但他們也對獵物的生命表達敬意。
-                  </p>
-                  <div class="row px-3 justify-content-center justify-content-lg-start">
-                    <a href="./festival.html" class="col-12 col-md-6 col-lg-6 col-xl-6 btn align-self-center">我要體驗</a>
-                    <img class="word-pic col-12 col-md-6 col-lg-6 col-xl-6 my-3" src="./img/img-banner/祭_字體.png"
-                      alt="" />
+          <!-- 文字區塊 -->
+          <div class="col-10 col-md-12 col-lg-4 align-self-start p-0 mb-3">
+            <!-- 1 -->
+            <div class="row m-0">
+              <div class="col-4">
+                <div class="empty"></div>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="row text-area m-0 justify-content-center">
+              <div
+                class="col-12 col-md-8 col-lg-10 col-xl-10 col-xxl-10 my-md-5 my-lg-0"
+              >
+                <div class="card-body">
+                  <div
+                    data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="1000"
+                    class="d-flex flex-column"
+                  >
+                    <h3 class="card-title my-lg-3">山林狩獵</h3>
+                    <p class="card-text mb-sm-4 mb-md-0 mb-lg-0">
+                      狩獵，是帶著禁忌與珍惜萬物的價值，經由一次次涉足山林，形塑一套與自然生活的價值與知識體系，而獵人巡獵之後，也會為部落帶回獵場及周邊環境最新的狀況。他們殺獵物，但他們也對獵物的生命表達敬意。
+                    </p>
+                    <div
+                      class="row px-3 justify-content-center justify-content-lg-start"
+                    >
+                      <a
+                        href="./hunt.html"
+                        class="col-12 col-md-6 col-lg-6 col-xl-6 btn align-self-center"
+                        >我要體驗</a
+                      >
+                      <img
+                        class="word-pic col-12 col-md-6 col-lg-6 col-xl-6 my-3"
+                        src="./img/img-banner/狩_字體.png"
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row justify-content-center empty2 m-0"></div>
+            <div class="row justify-content-center empty2 m-0"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- 宴會區塊 -->
-    <div class="container-fluid intro2 mx-0">
-      <div class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"></div>
-      <div class="row for-intro2 justify-content-center">
-        <!-- 圖片 -->
-        <div class="col-12 col-md-12 col-lg-8 p-0">
-          <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
-            <img class="show" src="./img/img-banner/宴.jpg 暈影.jpg" alt="" />
-          </div>
-        </div>
-        <!-- 文字區塊 -->
-        <div class="col-10 col-md-12 col-lg-4 align-self-start p-0 mb-0">
-          <!-- 1 -->
-          <div class="row m-0">
-            <div class="col-4">
-              <div class="empty"></div>
+      <!-- 祭典區塊 -->
+      <div class="container-fluid intro2 mx-0">
+        <div
+          class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"
+        ></div>
+        <div class="row for-intro2 flex-row-reverse justify-content-center">
+          <!-- 圖片 -->
+          <div class="col-12 col-md-12 col-lg-8 p-0">
+            <div
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            >
+              <img
+                class="show2"
+                src="./img/img-banner/祭.jpg 暈影.jpg"
+                alt=""
+              />
             </div>
           </div>
-          <!-- 2 -->
-          <div class="row text-area m-0 justify-content-center">
-            <div class="col-12 col-md-8 col-lg-10 col-xl-10 col-xxl-10 my-md-5 my-lg-0">
-              <div class="card-body">
-                <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000"
-                  class="d-flex flex-column">
-                  <h3 class="card-title my-lg-3">美食饗宴</h3>
-                  <p class="card-text mb-sm-4 mb-md-0 mb-lg-0">
-                    狩獵，是帶著禁忌與珍惜萬物的價值，經由一次次涉足山林，形塑一套與自然生活的價值與知識體系，而獵人巡獵之後，也會為部落帶回獵場及周邊環境最新的狀況。他們殺獵物，但他們也對獵物的生命表達敬意。
-                  </p>
-                  <div class="row px-3 justify-content-center justify-content-lg-start">
-                    <a href="./food.html" class="col-12 col-md-6 col-lg-6 col-xl-6 btn align-self-center">我要體驗</a>
-                    <img class="word-pic col-12 col-md-6 col-lg-6 col-xl-6 my-3" src="./img/img-banner/宴_字體.png"
-                      alt="" />
+          <!-- 文字區塊 -->
+          <div class="col-10 col-md-12 col-lg-4 align-self-start p-0 mb-3">
+            <!-- 1 -->
+            <div class="row m-0">
+              <div class="col-4">
+                <div class="empty"></div>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="row text-area m-0 justify-content-center">
+              <div
+                class="col-12 col-md-8 col-lg-10 col-xl-10 col-xxl-10 my-md-5 my-lg-0"
+              >
+                <div class="card-body">
+                  <div
+                    data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="1000"
+                    class="d-flex flex-column"
+                  >
+                    <h3 class="card-title my-lg-3">傳統祭典</h3>
+                    <p class="card-text mb-sm-4 mb-md-0 mb-lg-0">
+                      狩獵，是帶著禁忌與珍惜萬物的價值，經由一次次涉足山林，形塑一套與自然生活的價值與知識體系，而獵人巡獵之後，也會為部落帶回獵場及周邊環境最新的狀況。他們殺獵物，但他們也對獵物的生命表達敬意。
+                    </p>
+                    <div
+                      class="row px-3 justify-content-center justify-content-lg-start"
+                    >
+                      <a
+                        href="./festival.html"
+                        class="col-12 col-md-6 col-lg-6 col-xl-6 btn align-self-center"
+                        >我要體驗</a
+                      >
+                      <img
+                        class="word-pic col-12 col-md-6 col-lg-6 col-xl-6 my-3"
+                        src="./img/img-banner/祭_字體.png"
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row justify-content-center empty2 m-0"></div>
+            <div class="row justify-content-center empty2 m-0"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- 娛樂區塊 -->
-    <div class="container-fluid intro2 mx-0">
-      <div class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"></div>
-      <div class="row for-intro2 flex-row-reverse justify-content-center">
-        <!-- 圖片 -->
-        <div class="col-12 col-md-12 col-lg-8 p-0">
-          <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
-            <img class="show2" src="./img/img-banner/樂1.jpg 暈影.jpg" alt="" />
-          </div>
-        </div>
-        <!-- 文字區塊 -->
-        <div class="col-10 col-md-12 col-lg-4 align-self-start p-0 mb-3">
-          <!-- 1 -->
-          <div class="row m-0">
-            <div class="col-4">
-              <div class="empty"></div>
+      <!-- 宴會區塊 -->
+      <div class="container-fluid intro2 mx-0">
+        <div
+          class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"
+        ></div>
+        <div class="row for-intro2 justify-content-center">
+          <!-- 圖片 -->
+          <div class="col-12 col-md-12 col-lg-8 p-0">
+            <div
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            >
+              <img class="show" src="./img/img-banner/宴.jpg 暈影.jpg" alt="" />
             </div>
           </div>
-          <!-- 2 -->
-          <div class="row text-area m-0 justify-content-center">
-            <div class="col-12 col-md-8 col-lg-10 col-xl-10 col-xxl-10 my-md-5 my-lg-0">
-              <div class="card-body">
-                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000"
-                  class="d-flex flex-column">
-                  <h3 class="card-title my-lg-3">休閒娛樂</h3>
-                  <p class="card-text mb-sm-4 mb-md-0 mb-lg-0">
-                    狩獵，是帶著禁忌與珍惜萬物的價值，經由一次次涉足山林，形塑一套與自然生活的價值與知識體系，而獵人巡獵之後，也會為部落帶回獵場及周邊環境最新的狀況。他們殺獵物，但他們也對獵物的生命表達敬意。
-                  </p>
-                  <div class="row px-3 justify-content-center justify-content-lg-start">
-                    <a href="./fun.html" class="col-12 col-md-6 col-lg-6 col-xl-6 btn align-self-center">我要體驗</a>
-                    <img class="word-pic col-12 col-md-6 col-lg-6 col-xl-6 my-3" src="./img/img-banner/樂_字體.png"
-                      alt="" />
+          <!-- 文字區塊 -->
+          <div class="col-10 col-md-12 col-lg-4 align-self-start p-0 mb-0">
+            <!-- 1 -->
+            <div class="row m-0">
+              <div class="col-4">
+                <div class="empty"></div>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="row text-area m-0 justify-content-center">
+              <div
+                class="col-12 col-md-8 col-lg-10 col-xl-10 col-xxl-10 my-md-5 my-lg-0"
+              >
+                <div class="card-body">
+                  <div
+                    data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="1000"
+                    class="d-flex flex-column"
+                  >
+                    <h3 class="card-title my-lg-3">美食饗宴</h3>
+                    <p class="card-text mb-sm-4 mb-md-0 mb-lg-0">
+                      狩獵，是帶著禁忌與珍惜萬物的價值，經由一次次涉足山林，形塑一套與自然生活的價值與知識體系，而獵人巡獵之後，也會為部落帶回獵場及周邊環境最新的狀況。他們殺獵物，但他們也對獵物的生命表達敬意。
+                    </p>
+                    <div
+                      class="row px-3 justify-content-center justify-content-lg-start"
+                    >
+                      <a
+                        href="./food.html"
+                        class="col-12 col-md-6 col-lg-6 col-xl-6 btn align-self-center"
+                        >我要體驗</a
+                      >
+                      <img
+                        class="word-pic col-12 col-md-6 col-lg-6 col-xl-6 my-3"
+                        src="./img/img-banner/宴_字體.png"
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row justify-content-center empty2 m-0"></div>
+            <div class="row justify-content-center empty2 m-0"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- 章節結尾 -->
-
-    <!-- 章節結尾 -->
-  </section>
-  <!-- 影片專區 -->
-  <section class="video-text position-relative" id="video">
-    <img class="position-absolute top-0 panter" style="width: 100%" src="./img/img-footer/pattern.png" alt="" />
-    <div class="video-width">
-      <p class="p1" data-aos="fade-right" data-aos-duration="1500">
-        還無法決定嗎?
-      </p>
-      <p class="p2" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
-        先來趟雲旅遊吧!
-      </p>
-      <p></p>
-    </div>
-  </section>
-  <section class="video-title-box">
-    <div class="video-title">
-      <div class="left-fish" data-aos="fade-down-left" data-aos-easing="linear" data-aos-duration="500"
-        data-aos-delay="500">
-        <img src="./img/video-img/飛魚-左.png" alt="" />
-      </div>
-      <div class="video-titlebox">
-        <h1>影片專區</h1>
-        <div class="btm-img"></div>
-      </div>
-
-      <div class="right-fish" data-aos="fade-up-left" data-aos-easing="linear" data-aos-duration="500">
-        <img src="./img/video-img/飛魚-右.png" alt="" />
-      </div>
-    </div>
-    <!-- 影片 -->
-    <!-- Swiper -->
-    <div class="container-fluid mb-5">
-      <div class="row justify-content-center align-content-center">
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner video-padding">
-            <div class="carousel-item active">
-              <iframe width="100%" height="600" src="https://www.youtube.com/embed/M8MCn4w4dJ4"
-                title="春季你絕不可以錯過的山間部落秘境！原住民私房美食、無敵山景、打獵射箭兩天一夜全體驗！【台中梨山】｜林宣 Xuan Lin" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            </div>
-            <div class="carousel-item">
-              <iframe width="100%" height="600"
-                src="https://www.youtube.com/embed/xVLkkMZeMT4?list=RDCMUCFycVZXj9fRWB_OZfFKe2PA"
-                title="【花蓮超最野行程 ep.1】體驗原住民海釣！使用最傳統的釣竿！" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            </div>
-            <div class="carousel-item">
-              <iframe width="100%" height="600" src="https://www.youtube.com/embed/9UeZooqpcLQ"
-                title="【南投秘境武界部落ep.1】開露營車殺去觀景茶園露營區！路邊砍龍眼木柴燒！" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+      <!-- 娛樂區塊 -->
+      <div class="container-fluid intro2 mx-0">
+        <div
+          class="row justify-content-center justify-content-xl-end word-container px-4 px-lg-5"
+        ></div>
+        <div class="row for-intro2 flex-row-reverse justify-content-center">
+          <!-- 圖片 -->
+          <div class="col-12 col-md-12 col-lg-8 p-0">
+            <div
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            >
+              <img
+                class="show2"
+                src="./img/img-banner/樂1.jpg 暈影.jpg"
+                alt=""
+              />
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <!-- 文字區塊 -->
+          <div class="col-10 col-md-12 col-lg-4 align-self-start p-0 mb-3">
+            <!-- 1 -->
+            <div class="row m-0">
+              <div class="col-4">
+                <div class="empty"></div>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="row text-area m-0 justify-content-center">
+              <div
+                class="col-12 col-md-8 col-lg-10 col-xl-10 col-xxl-10 my-md-5 my-lg-0"
+              >
+                <div class="card-body">
+                  <div
+                    data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="1000"
+                    class="d-flex flex-column"
+                  >
+                    <h3 class="card-title my-lg-3">休閒娛樂</h3>
+                    <p class="card-text mb-sm-4 mb-md-0 mb-lg-0">
+                      狩獵，是帶著禁忌與珍惜萬物的價值，經由一次次涉足山林，形塑一套與自然生活的價值與知識體系，而獵人巡獵之後，也會為部落帶回獵場及周邊環境最新的狀況。他們殺獵物，但他們也對獵物的生命表達敬意。
+                    </p>
+                    <div
+                      class="row px-3 justify-content-center justify-content-lg-start"
+                    >
+                      <a
+                        href="./fun.html"
+                        class="col-12 col-md-6 col-lg-6 col-xl-6 btn align-self-center"
+                        >我要體驗</a
+                      >
+                      <img
+                        class="word-pic col-12 col-md-6 col-lg-6 col-xl-6 my-3"
+                        src="./img/img-banner/樂_字體.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center empty2 m-0"></div>
+          </div>
         </div>
       </div>
-    </div>
+      <!-- 章節結尾 -->
 
-    <!-- <div class="swiper mySwiper">
+      <!-- 章節結尾 -->
+    </section>
+    <!-- 影片專區 -->
+    <section
+      class="video-text position-relative"
+      style="overflow: hidden"
+      id="video"
+    >
+      <img
+        class="position-absolute top-0 panter"
+        style="width: 100%"
+        src="./img/img-footer/pattern.png"
+        alt=""
+      />
+      <div class="video-width">
+        <p
+          class="p1 px-4 px-md-0"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
+          還無法決定嗎?
+        </p>
+        <p
+          class="p2 px-4 px-md-0"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-delay="500"
+        >
+          先來趟雲旅遊吧!
+        </p>
+        <p></p>
+      </div>
+    </section>
+    <section class="video-title-box" style="overflow: hidden">
+      <div class="video-title">
+        <div
+          class="left-fish"
+          data-aos="fade-down-left"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+          data-aos-delay="500"
+        >
+          <img src="./img/video-img/飛魚-左.png" alt="" />
+        </div>
+        <div class="video-titlebox">
+          <h1>影片專區</h1>
+          <div class="btm-img"></div>
+        </div>
+
+        <div
+          class="right-fish"
+          data-aos="fade-up-left"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
+          <img src="./img/video-img/飛魚-右.png" alt="" />
+        </div>
+      </div>
+      <!-- 影片 -->
+      <!-- Swiper -->
+      <div class="container-fluid mb-5">
+        <div class="row justify-content-center align-content-center">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner video-padding">
+              <div class="carousel-item active">
+                <iframe
+                  width="100%"
+                  height="600"
+                  src="https://www.youtube.com/embed/M8MCn4w4dJ4"
+                  title="春季你絕不可以錯過的山間部落秘境！原住民私房美食、無敵山景、打獵射箭兩天一夜全體驗！【台中梨山】｜林宣 Xuan Lin"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="carousel-item">
+                <iframe
+                  width="100%"
+                  height="600"
+                  src="https://www.youtube.com/embed/xVLkkMZeMT4?list=RDCMUCFycVZXj9fRWB_OZfFKe2PA"
+                  title="【花蓮超最野行程 ep.1】體驗原住民海釣！使用最傳統的釣竿！"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="carousel-item">
+                <iframe
+                  width="100%"
+                  height="600"
+                  src="https://www.youtube.com/embed/9UeZooqpcLQ"
+                  title="【南投秘境武界部落ep.1】開露營車殺去觀景茶園露營區！路邊砍龍眼木柴燒！"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><iframe width="1200" height="600" src="https://www.youtube.com/embed/M8MCn4w4dJ4"
             title="春季你絕不可以錯過的山間部落秘境！原住民私房美食、無敵山景、打獵射箭兩天一夜全體驗！【台中梨山】｜林宣 Xuan Lin" frameborder="0"
@@ -470,159 +784,234 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div> -->
-    <!-- 海浪 -->
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-    <div class="wave wave4"></div>
-    <img src="./img/video-img/boat2_1.png" class="boat" alt="" />
-  </section>
+      <!-- 海浪 -->
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+      <img src="./img/video-img/boat2_1.png" class="boat" alt="" />
+    </section>
 
-  <div class="wrap" id="map">
-    <img class="move-l" src="./img/map/樹枝-左.png" width="200px" height="200px" alt="" />
-    <img class="move-r" src="./img/map/樹枝-右.png" width="200px" height="200px" alt="" />
-    <img class="owl" src="./img/map/貓頭鷹.png" width="100px" height="100px" alt="" />
-    <img class="work" src="./img/map/字方框_工作區域 1.png" width="300px" height="250px" alt="" />
-    <img class="owl2" width="150px" height="120px" src="./img/map/貓頭鷹2.png" alt="" />
-    <h3 class="center">部落地圖</h3>
-    <div data-aos="flip-up" id="app">
-      <svg width="500" height="600" ;>
-        <g class="counties"></g>
-        <path class="county-borders"></path>
-      </svg>
-    </div>
-    <div class="out">
-      <!-- Full screen modal -->
+    <div class="wrap" id="map">
+      <img
+        class="move-l"
+        src="./img/map/樹枝-左.png"
+        width="200px"
+        height="200px"
+        alt=""
+      />
+      <img
+        class="move-r"
+        src="./img/map/樹枝-右.png"
+        width="200px"
+        height="200px"
+        alt=""
+      />
+      <img
+        class="owl"
+        src="./img/map/貓頭鷹.png"
+        width="100px"
+        height="100px"
+        alt=""
+      />
+      <img
+        class="work"
+        src="./img/map/字方框_工作區域 1.png"
+        width="300px"
+        height="250px"
+        alt=""
+      />
+      <img
+        class="owl2"
+        width="150px"
+        height="120px"
+        src="./img/map/貓頭鷹2.png"
+        alt=""
+      />
+      <h3 class="center">部落地圖</h3>
+      <div data-aos="flip-up" id="app">
+        <svg width="500" height="600" ;>
+          <g class="counties"></g>
+          <path class="county-borders"></path>
+        </svg>
+      </div>
+      <div class="out">
+        <!-- Full screen modal -->
 
-      <!-- 按鈕Button trigger modal -->
-      <button type="button" class="btn map-btn" data-bs-toggle="modal" data-bs-target="#exampleModal-map">
-        <div class="container hidden-map map-list">
-          <div class="row $gray-100 map-card" style="background-color: rgba(220, 220, 220, 0.726)"></div>
-        </div>
-      </button>
+        <!-- 按鈕Button trigger modal -->
+        <button
+          type="button"
+          class="btn map-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal-map"
+        >
+          <div class="container hidden-map map-list">
+            <div
+              class="row $gray-100 map-card"
+              style="background-color: rgba(220, 220, 220, 0.726)"
+            ></div>
+          </div>
+        </button>
 
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal-map" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-          <div style="background-image: url('./img/map/brown.png'); opacity: 0.9" class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title fw-bold fs-1" id="exampleModalLabel">
-                詳細介紹
-              </h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-dialog modal-fullscreen-sm-down" style="background-size: contain">
-              <div class="info" style="padding: 16px; line-height: 2rem"></div>
-            </div>
-            <!-- <div class="modal-footer">
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal-map"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-fullscreen">
+            <div
+              style="background-image: url('./img/map/brown.png'); opacity: 0.9"
+              class="modal-content"
+            >
+              <div class="modal-header">
+                <h5 class="modal-title fw-bold fs-1" id="exampleModalLabel">
+                  詳細介紹
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div
+                class="modal-dialog modal-fullscreen-sm-down"
+                style="background-size: contain"
+              >
+                <div
+                  class="info"
+                  style="padding: 16px; line-height: 2rem"
+                ></div>
+              </div>
+              <!-- <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                   <button type="button" class="btn btn-primary">Save changes</button>
               </div> -->
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- footer -->
-  <!-- <div class="splite"></div> -->
-  <footer class="py-5 footer-bgc position-relative">
-    <!-- <img class="position-absolute top-0 footer-panint-top" style="width: 100%" src="./img/img-banner/圖騰_工作區域 1.png" alt="" /> -->
-    <div class="container pt-2">
-      <div class="row flex-column align-items-center">
-        <img class="col-2" src="./img/img-footer/footerlogo.png" alt="" />
-        <div class="col text-center text-muted small mt-4">
-          僅供學習用途，如有侵權請來信告知。
-        </div>
-        <div class="col text-center text-muted small mt-1">
-          Copyright © 2022 - Company Name
+    <!-- footer -->
+    <!-- <div class="splite"></div> -->
+    <footer class="py-5 footer-bgc position-relative">
+      <!-- <img class="position-absolute top-0 footer-panint-top" style="width: 100%" src="./img/img-banner/圖騰_工作區域 1.png" alt="" /> -->
+      <div class="container pt-2">
+        <div class="row flex-column align-items-center">
+          <img class="col-2" src="./img/img-footer/footerlogo.png" alt="" />
+          <div class="col text-center text-muted small mt-4">
+            僅供學習用途，如有侵權請來信告知。
+          </div>
+          <div class="col text-center text-muted small mt-1">
+            Copyright © 2022 - Company Name
+          </div>
         </div>
       </div>
-    </div>
-    <img class="position-absolute bottom-0" style="width: 100%" src="./img/img-footer/pattern.png" alt="" />
-  </footer>
+      <img
+        class="position-absolute bottom-0"
+        style="width: 100%"
+        src="./img/img-footer/pattern.png"
+        alt=""
+      />
+    </footer>
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-  <!-- 開場動畫JS -->
-  <script src="./js/anime.min.js"></script>
-  <script src="./js/op.js"></script>
-  <script src="./js/app.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <!-- 開場動畫JS -->
+    <script src="./js/anime.min.js"></script>
+    <script src="./js/op.js"></script>
+    <script src="./js/app.js"></script>
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
-  <!-- parallax -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- parallax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <!-- 影片JS -->
-  <script src="./js/video.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- 影片JS -->
+    <script src="./js/video.js"></script>
 
-  <!-- 地圖JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/topojson@3"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.6.1/d3.min.js"></script>
-  <script src="./js/map.js"></script>
-  <script>
-    // aos啟動
-    AOS.init();
+    <!-- 地圖JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.6.1/d3.min.js"></script>
+    <script src="./js/map.js"></script>
+    <script>
+      // aos啟動
+      AOS.init();
 
-    var scene = document.getElementById("hunter");
-    var bear = document.getElementById("bear");
-    var deer = document.getElementById("deer");
-    var sun = document.getElementById("sun");
-    var tree1 = document.getElementById("tree1");
-    var tree1 = document.getElementById("tree2");
-    var mountain = document.getElementById("mountain");
-    var mountain = document.getElementById("grass3");
-    var mountain = document.getElementById("grass2");
-    var mountain = document.getElementById("grass");
-    var title = document.getElementById("title");
+      var scene = document.getElementById("hunter");
+      var bear = document.getElementById("bear");
+      var deer = document.getElementById("deer");
+      var sun = document.getElementById("sun");
+      var tree1 = document.getElementById("tree1");
+      var tree1 = document.getElementById("tree2");
+      var mountain = document.getElementById("mountain");
+      var mountain = document.getElementById("grass3");
+      var mountain = document.getElementById("grass2");
+      var mountain = document.getElementById("grass");
+      var title = document.getElementById("title");
 
-    var parallaxInstance = new Parallax(title, {
-      relativeInput: true,
-    });
-    var parallaxInstance = new Parallax(grass, {
-      relativeInput: true,
-    });
-    var parallaxInstance = new Parallax(grass2, {
-      relativeInput: true,
-    });
-    var parallaxInstance = new Parallax(grass3, {
-      relativeInput: true,
-    });
-    var parallaxInstance = new Parallax(mountain, {
-      relativeInput: true,
-    });
-    var parallaxInstance = new Parallax(tree2, {
-      relativeInput: true,
-    });
-    var parallaxInstance = new Parallax(tree1, {
-      relativeInput: true,
-    });
-    var parallaxInstance = new Parallax(scene, {
-      relativeInput: true,
-    });
-    var parallaxInstance = new Parallax(bear, {
-      relativeInput: true,
-    });
-    var parallaxInstance = new Parallax(deer, {
-      relativeInput: true,
-    });
-    var parallaxInstance = new Parallax(sun, {
-      relativeInput: false,
-    });
-    parallaxInstance.friction(0.1, 0.2);
-  </script>
-</body>
+      var parallaxInstance = new Parallax(title, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(grass, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(grass2, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(grass3, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(mountain, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(tree2, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(tree1, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(scene, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(bear, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(deer, {
+        relativeInput: true,
+      });
+      var parallaxInstance = new Parallax(sun, {
+        relativeInput: false,
+      });
+      parallaxInstance.friction(0.1, 0.2);
 
+      //這是menu的錨點替代
+      function scrollPosition(top) {
+        window.scrollTo({
+          top: top,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
 </html>

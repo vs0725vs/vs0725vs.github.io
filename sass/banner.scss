@@ -18,7 +18,7 @@
         0 0 10px rgba(100, 149, 216, 1), 0 0 20px rgba(100, 149, 216, 1),
         0 0 40px rgba(100, 149, 216, 1);
       animation: neo-shine 3s 1s linear infinite;
-      .menu.hidden{
+      .menu.hidden {
         display: none;
       }
       @keyframes neo-shine {
@@ -74,12 +74,12 @@
           max-width: 220px;
           max-height: 600px;
         }
-        .menu-link{
+        .menu-link {
           // position: relative;
-          &:hover .blackline{
+          &:hover .blackline {
             opacity: 1;
           }
-          .blackline{
+          .blackline {
             // position: absolute;
             // bottom: 0px;
             opacity: 0;
@@ -93,7 +93,7 @@
           transition: all 0.2s ease-in;
           &:hover {
             background-color: rgba(250, 235, 215, 0.445);
-            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527)
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.527);
           }
           &:hover a {
           }
@@ -109,10 +109,10 @@
       background-position: center center;
       background-size: cover;
       @media (max-width: 820px) {
-        background-image: url("../img/img-banner/banner2.png");
+        background-image: url("../img/img-banner/banner820pxNEW-01.png");
       }
       @media (max-width: 375px) {
-        background-image: url("../img/img-banner/banner375px-01.png");
+        background-image: url("../img/img-banner/banner375pxNEW-01.png");
       }
       .banner-active {
         display: none;
@@ -294,6 +294,15 @@
           }
           100% {
             color: rgb(79, 78, 78);
+          }
+        }
+        @media (max-width: 820px) {
+          margin-top: 0%;
+          position: relative;
+          img {
+            @media (max-width: 820px) {
+              margin-top: 0%;
+            }
           }
         }
       }
