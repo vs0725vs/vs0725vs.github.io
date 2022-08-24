@@ -73,6 +73,10 @@
           height: 100%;
           max-width: 220px;
           max-height: 600px;
+          @media (max-width: 375px) {
+            max-width: 100px;
+            max-height: 275px;
+          }
         }
         .menu-link {
           // position: relative;
