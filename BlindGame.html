@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .background {
+            display: flex;
+            /* display: none; */
+            width: 100%;
+            height: 100vh;
+            background-color: antiquewhite;
+
+        }
+
+        .bigbox {
+            width: 500px;
+            height: 500px;
+            padding: 10px;
+            margin: auto;
+            /* display: flex; */
+            flex-wrap: wrap;
+            display: none;
+        }
+
+        .bigbox.active {
+            display: flex;
+        }
+
+        .smallbox {
+            width: 50%;
+            height: 50%;
+            background-color: rgba(127, 255, 212);
+            border: 5px solid white;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .alpha {
+
+            background-color: rgba(127, 255, 212, 0.237);
+
+        }
+
+        .score-lable {
+            position: absolute;
+            top: 10%;
+            left: calc(50% - 50px);
+            width: 100px;
+            height: 40px;
+            background-color: rgba(177, 215, 247, 0.518);
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 0px;
+            display: none;
+        }
+
+        .score-lable.active {
+            display: block;
+        }
+
+        .score {
+            display: inline-block;
+        }
+
+        .start-btn {
+            margin: 300px auto;
+            width: 400px;
+            height: 100px;
+            background-color: sandybrown;
+            border-radius: 10px;
+            font-size: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .timer-box {
+            position: absolute;
+            width: 100px;
+            height: 60px;
+            background-color: rgb(255, 127, 80, 0.8);
+            text-align: center;
+            border-radius: 10px;
+            top: 60%;
+            left: 0%;
+        }
+
+        .Timer {
+            margin: 0px;
+            font-size: 50px;
+        }
+
+        .result-board {
+            /* display: flex; */
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background-color: antiquewhite;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .result-board.active {
+            display: flex;
+        }
+
+        .result {
+            width: 500px;
+            height: 200px;
+            /* background-color: aquamarine; */
+            text-align: center;
+            /* line-height: 300px; */
+            font-size: 80px;
+            margin: 50px 0px;
+        }
+
+        .restart-btn {
+            width: 200px;
+            height: 50px;
+            background-color: rgb(250, 182, 46);
+            text-align: center;
+            line-height: 50px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .pause{
+            position: absolute;
+            width: 200px;
+            height: 60px;
+            background-color: rgb(255, 127, 80, 0.8);
+            text-align: center;
+            border-radius: 10px;
+            top: 80%;
+            left: 0%;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="result-board">
+            <h3>你的分數</h3>
+            <p class="result">0</p>
+            <div class="restart-btn" onclick="restart()">Playagain</div>
+        </div>
+        <div class="start-btn" onclick="startgame()">START</div>
+        <div class="score-lable">Stage <p class="score">1</p>
+        </div>
+        <div class="bigbox"></div>
+        <div class="timer-box">
+            <p class="Timer">60</p>
+        </div>
+        <div class="pause" onclick="pause()">Pause</div>
+    </div>
+
+    <script>
+        const bb = document.querySelector('.bigbox');
+        const sl = document.querySelector('.score-lable');
+        var Timer = document.querySelector('.Timer');
+        var cardNumber = 4;
+        var score = 1;
+        var level = 1;
+        var o = 0.45
+        //產生亂數 
+        function getRandomInt() {
+            var random = Math.floor(Math.random() * cardNumber);
+            return random;
+        }
+        //產生RGB亂數
+        function getRandomRGB() {
+            return Math.floor(Math.random() * 253) + 1;
+        };
+        newRound();
+        function newRound() {
+            // 清空
+            bb.innerHTML = '';
+            // 生成方塊
+            var ranDom = getRandomInt();
+            //產生RGB亂數
+            var r = getRandomRGB();
+            var g = getRandomRGB();
+            var b = getRandomRGB();
+            if (o < 0.8) {
+                o += 0.05
+            }
+            for (let i = 0; i < (cardNumber); i++) {
+                if (i !== ranDom) {
+                    bb.innerHTML +=
+                        `<div class="smallbox" onclick="work('false')" style="background-color:rgba(${r}, ${g}, ${b});"></div>`
+                }
+                else {
+                    bb.innerHTML +=
+                        `<div class="smallbox alpha" onclick="work('true')" style="background-color:rgba(${r}, ${g}, ${b}, ${o});"></div>`
+                }
+            }
+        }
+        function work(answer) {
+            if (answer == 'true') {
+                score++;
+                level++;
+                document.querySelector('.score').textContent = score;
+                if (level == 2 || level == 3 || level == 4 || level == 6 || level == 8 || level == 11) {
+                    let a = Math.sqrt(cardNumber);
+                    cardNumber = (a + 1) ** 2;
+                }
+                console.log(score);
+                console.log(cardNumber);
+                newRound();
+                var sbs = document.querySelectorAll('.smallbox');
+                sbs.forEach(function (sb) {
+                    if (score == 2) {
+                        sb.style.height = 33.33 + '%';
+                        sb.style.width = 33.33 + '%';
+                    }
+                    else if (score == 3) {
+                        sb.style.height = 25 + '%';
+                        sb.style.width = 25 + '%';
+                    }
+                    else if (score <= 5) {
+                        sb.style.height = 20 + '%';
+                        sb.style.width = 20 + '%';
+                    }
+                    else if (score <= 7) {
+                        sb.style.height = 16.666 + '%';
+                        sb.style.width = 16.666 + '%';
+                    }
+                    else if (score <= 10) {
+                        sb.style.height = 14.28 + '%';
+                        sb.style.width = 14.28 + '%';
+                    }
+                    else {
+                        sb.style.height = 12.5 + '%';
+                        sb.style.width = 12.5 + '%';
+                    }
+                })
+            }
+            else {
+                alert('答錯')
+            }
+        }
+        function startgame() {
+            bb.classList.add('active');
+            sl.classList.add('active');
+            document.querySelector('.start-btn').style.display = 'none';
+            var timer = setInterval(function () {
+                Timer.innerHTML--;
+                if (Timer.innerHTML == 0) {
+                    clearInterval(timer);
+                    Timer.innerHTML = 60;
+                    bb.classList.remove('active');
+                    sl.classList.remove('active');
+                    document.querySelector('.result').innerHTML = document.querySelector('.score').innerHTML;
+                    document.querySelector('.result-board').classList.add('active');
+                }
+            }, 1000)
+        }
+        function restart() {
+            document.querySelector('.result-board').classList.remove('active');
+            bb.classList.add('active');
+            sl.classList.add('active');
+            cardNumber = 4;
+            score = 1;
+            level = 1;
+            o = 0.45
+            document.querySelector('.score').textContent = 1;
+            newRound();
+            var timer = setInterval(function () {
+                Timer.innerHTML--;
+                if (Timer.innerHTML == 0) {
+                    clearInterval(timer);
+                    Timer.innerHTML = 60;
+                    bb.classList.remove('active');
+                    sl.classList.remove('active');
+                    document.querySelector('.result').innerHTML = document.querySelector('.score').innerHTML;
+                    document.querySelector('.result-board').classList.add('active');
+                }
+            }, 1000)
+        }
+        var flag = 0;
+        function pause(){
+            if (flag == 0){
+                console.log(2);
+                flag = 1;
+                clearInterval(timer);
+            }
+            else{
+                flag = 0;
+                var timer = setInterval(function () {
+                Timer.innerHTML--;
+                if (Timer.innerHTML == 0) {
+                    clearInterval(timer);
+                    Timer.innerHTML = 60;
+                    bb.classList.remove('active');
+                    sl.classList.remove('active');
+                    document.querySelector('.result').innerHTML = document.querySelector('.score').innerHTML;
+                    document.querySelector('.result-board').classList.add('active');
+                }
+            }, 1000)
+            }
+        }
+        // var alpha = document.querySelector('smallbox-alpha');
+        // alpha.addEventListener('click', function () {
+
+        // })
+    </script>
+
+</body>
+
+</html>

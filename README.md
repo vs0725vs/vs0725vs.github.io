@@ -1,2 +1,0 @@
-# teamProject
-Team work project

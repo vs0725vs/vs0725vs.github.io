@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .textbox {
+            width: 200px;
+            height: 30px;
+            margin-top: 200px;
+        }
+
+        .result {
+            /* background-color: aquamarine; */
+            transition: all 0.5s cubic-bezier(0.42, 0, 1.0, 1.0);
+            transform: translate(-150px, 0px);
+            font-size: 60px;
+            opacity: 0;
+        }
+
+        .button:focus+.result {
+            transform: translate(0px, 0px);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box">請輸入成績</div> -->
+    <input class="textbox" type="" placeholder="請輸入數值"><br>
+    <button onclick="calc()" class="button">計算</button>
+    <p class="result"></p>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        function calc() {
+            var input = document.querySelector('.textbox');
+            var btn = document.querySelector('.button');
+            var res = document.querySelector('.result');
+            var score = input.value;
+            if (isNaN(score) || score.trim() === "") {
+                res.textContent = '請輸入數字';
+            }
+            else if(score%1 !== 0){
+                res.textContent = '數值需為整數';
+            }
+            else {
+                if (score < 0 || score > 100) {
+                    res.textContent = "無效數值";
+                }
+                else if (score == 100) {
+                    res.textContent = "perfect";
+                }
+                else if (score > 89) {
+                    res.textContent = "A";
+                }
+                else if (score > 79) {
+                    res.textContent = "B";
+                }
+                else if (score > 69) {
+                    res.textContent = "C";
+                }
+                else if (score > 59) {
+                    res.textContent = "D";
+                }
+                else {
+                    res.textContent = "E";
+                }
+            }
+        }
+
+        // btn.addEventListener('click', function () {
+        //     console.log('HI');
+        // }, false);
+    </script>
+
+</body>
+
+</html>

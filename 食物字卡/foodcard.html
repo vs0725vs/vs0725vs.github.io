@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: rgba(237, 229, 205, 0.695);
+
+        }
+
+        nav {
+            height: 65px;
+            background-color: rgb(203, 247, 248);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+
+        }
+
+        .btn {
+            width: 10%;
+            height: 35px;
+            line-height: 35px;
+            padding: 0px;
+            margin: 0px 20px;
+            display: inline-block;
+            background-color: rgba(64, 224, 208, 0.734);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        :hover.btn {
+            background-color: rgba(64, 147, 224, 0.734);
+            color: rgb(38, 83, 125);
+        }
+
+        .userface {
+            width: 100%;
+            height: calc(100vh - 65px);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 50px;
+            padding: 50px 290px;
+            gap: 30px;
+        }
+
+        .card {
+            background-color: rgb(200, 69, 69);
+            width: 200px;
+            height: 350px;
+            border-radius: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            transform: scale(1);
+        }
+
+        :hover.card {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+
+        .name {
+            height: 40px;
+            font-size: 30px;
+            margin: 2px 0px;
+            text-align: center;
+        }
+
+        .cardContent {
+            text-align: center;
+            margin: 5px 0px;
+            height: 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .price {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 60%;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+
+        }
+
+        .btn.bgc {
+            background-color: rgba(64, 147, 224, 0.734);
+            color: rgb(38, 83, 125);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="btn btn1 food" onclick="filter('food')">主食</ul>
+        <ul class="btn btn2 drink" onclick="filter('drink')">飲料</ul>
+        <ul class="btn btn3 dessert" onclick="filter('dessert')">甜點</ul>
+        <ul class="btn btn4 all" onclick="filter('all')">全部</ul>
+    </nav>
+    <main>
+        <div class="userface">
+
+        </div>
+    </main>
+
+    <script>
+        const foods = [
+            {
+                name: '戰斧豬排',
+                img: './img/alex-munsell-auIbTAcSH6E-unsplash.jpg',
+                content: '好吃的豬排',
+                price: 200,
+                tag: ['food', 'all']
+            },
+            {
+                name: '田園沙拉',
+                img: './img/anna-pelzer-IGfIGP5ONV0-unsplash.jpg',
+                content: '健康又好吃',
+                price: 350,
+                tag: ['food', 'all']
+            },
+            {
+                name: '草莓佐桑葚醬',
+                img: './img/anna-tukhfatullina-food-photographer-stylist-Mzy-OjtCI70-unsplash.jpg',
+                content: '高檔下午茶最佳夥伴',
+                price: 500,
+                tag: ['dessert', 'all']
+            },
+            {
+                name: '楓糖鬆餅',
+                img: './img/chad-montano-eeqbbemH9-c-unsplash.jpg',
+                content: '網美首選,拍照最好看',
+                price: 1000,
+                tag: ['dessert', 'food', 'all']
+            },
+            {
+                name: '正統披薩',
+                img: './img/chad-montano-MqT0asuoIcU-unsplash.jpg',
+                content: '我們不提供鳳梨片',
+                price: 200,
+                tag: ['food', 'all']
+            },
+            {
+                name: '香蔥水餃',
+                img: './img/charlesdeluvio-D-vDQMTfAAU-unsplash.jpg',
+                content: '手工現包',
+                price: 30,
+                tag: ['food', 'all']
+            },
+            {
+                name: '冰淇淋',
+                img: './img/ian-dooley-TLD6iCOlyb0-unsplash.jpg',
+                content: '早上好上益,<br>現在我有冰淇淋',
+                price: 200,
+                tag: ['dessert', 'all']
+            },
+            {
+                name: '調酒',
+                img: './img/melissa-walker-horn-gtDYwUIr9Vg-unsplash.jpg',
+                content: '清涼爽口',
+                price: 200,
+                tag: ['drink', 'all']
+            },
+            {
+                name: 'taco',
+                img: './img/chad-montano-lP5MCM6nZ5A-unsplash.jpg',
+                content: '網友指定第一名',
+                price: 200,
+                tag: ['food', 'all']
+            },
+            {
+                name: '叻沙魚排',
+                img: './img/khloe-arledge-ND3edEmzcdQ-unsplash.jpg',
+                content: '懷舊的家鄉味',
+                price: 200,
+                tag: ['food', 'all']
+            },
+        ]
+
+        var userface = document.querySelector('.userface');
+        function filter(type) {
+            //清除按鈕顏色
+            document.querySelectorAll('.btn').forEach(function (btn) {
+                btn.classList.remove('bgc');
+            })
+            //加入按鈕顏色
+            document.querySelector(`.${type}`).classList.add('bgc');
+            //清空
+            userface.innerHTML = "";
+            //加入字卡
+            foods.forEach(function (product) {
+                // if (product.tag.indexOf(type) != -1) {
+                    if (product.tag.includes(type)) {
+                    userface.innerHTML +=
+                        `
+                        <div class="card">
+                        <picture><img src="${product.img}"alt=""></picture>
+                        <h3 class='name'>${product.name}</h3>
+                        <p class='cardContent'>${product.content}</p>
+                        <p class="price">價格: <span class="priceValue">${product.price}元</span></p>
+                        </div>
+                        `
+                };
+            });
+        }
+        filter('all');
+            // //初始畫面
+            // //加入按鈕顏色
+            // document.querySelector('.btn4').classList.add('bgc');
+            // //加入字卡
+            // foods.forEach(function (product) {
+            //     // if(product.tag == 'food'){}
+            //     userface.innerHTML +=
+            //         `
+            //         <div class="card">
+            //             <picture><img src="${product.img}"alt=""></picture>
+            //             <h3 class='name'>${product.name}</h3>
+            //             <p class='cardContent'>${product.content}</p>
+            //             <p class="price">價格:<span class="priceValue">${product.price}元</span></p>
+            //         </div>
+            //          `
+            // });
+            // //按鈕:全部
+            // document.querySelector('.btn4').addEventListener('click', function () {
+            //     //加入按鈕顏色
+            //     document.querySelectorAll('.btn').forEach(function (btn) {
+            //         btn.classList.remove('bgc');
+            //     })
+            //     document.querySelector('.btn4').classList.add('bgc');
+            //     //清空
+            //     userface.innerHTML = "";
+            //     //加入字卡
+            //     foods.forEach(function (product) {
+            //         userface.innerHTML +=
+            //             `
+            //         <div class="card">
+            //             <picture><img src="${product.img}"alt=""></picture>
+            //             <h3 class='name'>${product.name}</h3>
+            //             <p class='cardContent'>${product.content}</p>
+            //             <p class="price">價格: <span class="priceValue">${product.price}元</span></p>
+            //         </div>
+            //          `
+            //     });
+            // });
+            // //按鈕:主食
+            // document.querySelector('.btn1').addEventListener('click', function () {
+            //     //加入按鈕顏色
+            //     document.querySelectorAll('.btn').forEach(function (btn) {
+            //         btn.classList.remove('bgc');
+            //     })
+            //     document.querySelector('.btn1').classList.add('bgc');
+            //     //清空
+            //     userface.innerHTML = "";
+            //     //加入字卡
+            //     foods.forEach(function (product) {
+            //         if (product.tag.indexOf('food') != -1) {
+            //             userface.innerHTML +=
+            //                 `
+            //         <div class="card">
+            //             <picture><img src="${product.img}"alt=""></picture>
+            //             <h3 class='name'>${product.name}</h3>
+            //             <p class='cardContent'>${product.content}</p>
+            //             <p class="price">價格: <span class="priceValue">${product.price}元</span></p>
+            //         </div>
+            //          `
+            //         };
+            //     });
+            // });
+            // //按鈕:飲料
+            // document.querySelector('.btn2').addEventListener('click', function () {
+            //     //加入按鈕顏色
+            //     document.querySelectorAll('.btn').forEach(function (btn) {
+            //         btn.classList.remove('bgc');
+            //     })
+            //     document.querySelector('.btn2').classList.add('bgc');
+            //     //清空
+            //     userface.innerHTML = "";
+            //     //加入字卡
+            //     foods.forEach(function (product) {
+            //         if (product.tag.indexOf('drink') != -1) {
+            //             userface.innerHTML +=
+            //                 `
+            //         <div class="card">
+            //             <picture><img src="${product.img}"alt=""></picture>
+            //             <h3 class='name'>${product.name}</h3>
+            //             <p class='cardContent'>${product.content}</p>
+            //             <p class="price">價格: <span class="priceValue">${product.price}元</span></p>
+            //         </div>
+            //          `
+            //         };
+            //     });
+            // });
+            // //按鈕:甜點
+            // document.querySelector('.btn3').addEventListener('click', function () {
+            //     //加入按鈕顏色
+            //     document.querySelectorAll('.btn').forEach(function (btn) {
+            //         btn.classList.remove('bgc');
+            //     })
+            //     document.querySelector('.btn3').classList.add('bgc');
+            //     //清空
+            //     userface.innerHTML = "";
+            //     //加入字卡
+            //     foods.forEach(function (product) {
+            //         if (product.tag.indexOf('dessert') != -1) {
+            //             userface.innerHTML +=
+            //                 `
+            //         <div class="card">
+            //             <picture><img src="${product.img}"alt=""></picture>
+            //             <h3 class='name'>${product.name}</h3>
+            //             <p class='cardContent'>${product.content}</p>
+            //             <p class="price">價格: <span class="priceValue">${product.price}元</span></p>
+            //         </div>
+            //          `
+            //         };
+            //     });
+            // });
+    </script>
+</body>
+
+</html>

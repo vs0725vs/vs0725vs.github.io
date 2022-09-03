@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .img1 {
+            width: 100vw;
+            min-height: 100vh;
+            background-image: url(./img/pexels-spencer-selover-428427.jpg);
+            opacity: 0.6;
+            background-attachment: fixed;
+            /* 固定圖像 */
+            background-position: center center;
+            /* 圖像置中 */
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        #img2 {
+            width: 100vw;
+            min-height: 475px;
+            background-image: url(./img/pexels-spencer-selover-614974.jpg);
+            opacity: 0.6;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        #img3 {
+            width: 100vw;
+            min-height: 600px;
+            background-image: url(./img/pexels-eberhard-grossgasteiger-516863.jpg);
+            opacity: 0.6;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        #scroll-box {
+            padding: 5px 45px;
+            width: 250px;
+            height: 50px;
+            background-color: rgb(31, 31, 31);
+            border-radius: 1em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            font-family: 'Montserrat', sans-serif;
+            color: aliceblue;
+            text-align: center;
+            letter-spacing: 17px;
+
+        }
+
+        .text {
+            color: #777;
+            background-color: rgb(19, 13, 50);
+            ;
+            text-align: center;
+            padding: 50px 160px;
+            text-align: justify;
+            font-size: 1em;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .text h2 {
+            letter-spacing: 5px;
+            text-align: center;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            transform: translate(0%, -50%);
+        }
+
+        .border {
+            background-color: transparent;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 5em;
+            color: #f7f7f7;
+            padding: 18px;
+            letter-spacing: 10px;
+            text-align: center;
+            text-shadow: black 0.1em 0.1em 0.2em;
+        }
+
+        .text2 {
+            color: #777;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 50px 160px;
+            text-align: justify;
+            font-size: 1em;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .end-box {
+            padding: 5px;
+            width: 12em;
+            height: 3em;
+            background-color: rgb(31, 31, 31);
+            border-radius: 1em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .img1 .end-box p {
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img1">
+        <div id="scroll-box">scroll</div>
+    </div>
+    <div class="text">
+        <h2>わとやについて</h2>
+        <p>ここ「わとや」は千葉県夷隅郡大多喜町の小さな集落にある小さな古民家。
+            大正時代に建てられたこの建物は、集落を見渡せる一番の高台にあり、目の前には以前棚田だった場所や段々畑が、天気の良い日にはなんと富士山まで見えてしまう立地です。
+            現在は都心から車で一時間半というアクセスの良さも、房総半島の内陸部だけにアクアラインが通る以前はまさに陸の孤島。</p>
+    </div>
+    <div id="img2">
+        <div class="caption">
+            <div class="border">FRESH</div>
+        </div>
+    </div>
+    <div class="text2">
+        <p>まさに「わとや」はそんな環境の中にひっそりと佇んでいる秘密基地。
+            そして、米を作っている田んぼはと言えば、二ヶ所から湧き水が溢れ、すぐ脇に清流が流れ小さな滝があり、夏には作業後の沐浴が毎日の楽しみとなるような異次元空間。遊べる田んぼという言葉が似合う場所です。</p>
+    </div>
+    <div id="img3">
+        <div class="caption">
+            <div class="border">SCROLL UP</div>
+        </div>
+    </div>
+    <div class="img1">
+        <div class="end-box">
+            <p> (๑•̀ㅂ•́)و✧</p>
+        </div>
+    </div>
+</body>
+
+</html>
