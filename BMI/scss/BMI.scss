@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+
+.b {
+    border: 3px solid rgba(0, 0, 0, 0.502);
+
+}
+
+.font {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    // transition: all 0.5s cubic-bezier(0.42, 0, 1.0, 1.0);
+    // transform: translate(-150px, 0px);
+    // opacity: 0;
+}
+
+// .button:focus+.result {
+//     transform: translate(0px, 0px);
+//     opacity: 1;
+// }
+
+.bgc {
+    background-color: rgba(255, 235, 205, 0.81);
+    border-radius: 5px;
+}
+
+.resultbackground {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/pexels-kseniya-lapteva-9175713.jpg');
+    background-size: cover;
+    background-position: center center;
+
+    .res-title {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(245, 235, 220, 0.822);
+
+        h1 {
+            margin-top: 30px;
+            font-size: 50px;
+        }
+    }
+
+    // .res-content.active {
+    //     opacity: 1;
+    //     transition: all 0.5s ease-out;
+    //     transform: translate(-10px, -10px);
+    // }
+    .res-content {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        // opacity: 0;
+        .bmi-score.active1{
+            opacity: 1;
+            transition: all 0.5s ease-out;
+            transform: translate(-20px, -1px);
+        }
+        .degree.active2{
+            opacity: 1;
+            transition: all 1s ease-out;
+            transform: translate(-20px, -1px);
+        }
+        .suggestion.active3{
+            opacity: 1;
+            transition: all 1.5s ease-out;
+            transform: translate(-20px, -1px);
+        }
+        .bmi-score.reset{
+            opacity: 0;
+        }
+        .degree.reset{
+            opacity: 0;
+        }
+        .suggestion.reset{
+            opacity: 0;
+        }
+        .card {
+            width: 80%;
+            display: flex;
+            opacity: 0;
+            .card-title {
+                height: 85px;
+                width: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(231, 226, 214);
+            }
+
+            .card-text {
+                height: 85px;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.textbackground {
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/7cd0ab143c3a5a055417289a95dbaafc.jpg);
+
+    .text-title {
+        width: 100%;
+        height: 30%;
+    }
+
+    .text-box {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .tall-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+            span {
+                display: block;
+            }
+        }
+
+        .weight-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            span {
+                display: block;
+            }
+
+            .writebox {
+                margin-left: 3px;
+            }
+        }
+    }
+
+    .btnbox {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+
+        .button {
+            width: 100px;
+            height: 50px;
+            margin: 0px 20px;
+        }
+    }
+}

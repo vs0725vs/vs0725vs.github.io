@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Noto+Sans+TC:wght@300&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/BMI.css">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="resultbackground b">
+        <div class="res-title b">
+            <h1>BMI計算器</h1>
+        </div>
+        <div class="res-content b">
+            <div class="bmi-score card ">
+                <div class="card-title b">
+                    <h3>BMI</h3>
+                </div>
+                <div class="card-text bgc">
+                    <p class="bmi-res font "></p>
+                </div>
+            </div>
+            <div class="degree card ">
+                <div class="card-title b">
+                    <h3>身體狀況</h3>
+                </div>
+                <div class="card-text bgc">
+                    <p class="bmi-degree font "></p>
+                </div>
+            </div>
+            <div class="suggestion  card ">
+                <div class="card-title b">
+                    <h3>建議</h3>
+                </div>
+                <div class="card-text bgc">
+                    <p class="bmi-sug font "></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="textbackground b">
+        <div class="text-title "></div>
+        <div class="text-box ">
+            <div class="tall-box">
+                <span>身高(cm):&emsp;</span>
+                <input class="tall writebox" type="" placeholder="請輸入數值">
+            </div>
+            <div class="weight-box">
+                <span>體重(kg):&emsp;</span>
+                <input class="weight writebox" type="" placeholder="請輸入數值">
+            </div>
+
+        </div>
+        <div class="btnbox ">
+            <button onclick="calc()" class="button calc">計算</button>
+            <button onclick="reset()" class="button">初始化</button>
+        </div>
+    </div>
+    <script>
+        var score = document.querySelector('.bmi-score');
+        var degree = document.querySelector('.degree');
+        var suggestion = document.querySelector('.suggestion');
+        function calc() {
+            
+            score.classList.remove('reset');
+            degree.classList.remove('reset');
+            suggestion.classList.remove('reset');
+            score.classList.add('active1');
+            degree.classList.add('active2');
+            suggestion.classList.add('active3');
+            var tall = document.querySelector('.tall');
+            var weight = document.querySelector('.weight');
+            var t = tall.value;
+            var w = weight.value;
+            if (isNaN(t) || isNaN(w)) {
+                alert("請輸入數值");
+            }
+            else if (t.trim() === "" || w.trim() === "") {
+                alert("請輸入數值");
+            }
+            else if (t % 1 !== 0 || w % 1 !== 0) {
+                alert("請輸入整數");
+            }
+            else if (t === 0 || w === 0) {
+                alert("數值不能為零");
+            }
+            else {
+                var square = (t / 100) ** 2;
+                var bmi = w / square;
+                bmi = Math.round(bmi * 10) / 10;
+                var r = document.querySelector('.bmi-res');
+                r.textContent = bmi;
+                var d = document.querySelector('.bmi-degree');
+                var s = document.querySelector('.bmi-sug');
+                if (bmi >= 35) {
+                    d.textContent = "重度肥胖";
+                    s.textContent = "這顆橘子你咬著八";
+                    // d.animate = (fadeIn, 1s, cubic-bezier(0.42, 0, 1.0, 1.0));
+                }
+                else if (bmi >= 30) {
+                    d.textContent = "中度肥胖";
+                    s.textContent = "這麼會吃喔"
+                }
+                else if (bmi >= 24) {
+                    d.textContent = "輕度肥胖";
+                    s.textContent = "就叫你手搖喝無糖";
+                }
+                else if (bmi >= 18.5) {
+                    d.textContent = "正常範圍";
+                    s.textContent = "繼續保持";
+                }
+                else {
+                    d.textContent = "體重過輕";
+                    s.textContent = "趕快一天一杯珍奶加雞排";
+                }
+            }
+        }
+        function reset() {
+            var d = document.querySelector('.bmi-degree');
+            var s = document.querySelector('.bmi-sug');
+            var r = document.querySelector('.bmi-res');
+            r.textContent = "";
+            d.textContent = "";
+            s.textContent = "";
+            document.querySelector('.tall').value = "";
+            document.querySelector('.weight').value = "";
+            score.classList.add('reset');
+            degree.classList.add('reset');
+            suggestion.classList.add('reset');
+        }
+
+    </script>
+</body>
+
+</html>
